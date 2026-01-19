@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    .find-ticket-page {
+      min-height: 100vh;
+      display: flex;
+    }
+
+    .left-panel {
+      flex: 1;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left-panel h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #1e0a3c;
+      margin-bottom: 20px;
+    }
+
+    .continue-btn {
+      background: #d1410c;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+
+    .continue-btn:hover {
+      background: #b8370a;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      color: #3659e3;
+      text-decoration: none;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .right-panel {
+      flex: 1;
+      background: url("https://images.stockcake.com/public/6/6/c/66ca058c-d024-47fb-970d-6107b4e01abe_large/vibrant-dance-party-stockcake.jpg")
+        center/cover no-repeat;
+      position: relative;
+    }
+
+    .image-caption {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      color: #fff;
+      font-size: 12px;
+      text-align: right;
+    }
+
+    .eventbrite-logo img {
+      font-weight: 700;
+      width: 100px;
+      height: 40px;
+      margin-bottom: 30px;
+    }
+  </style>
+
+  <body>
+    <div class="find-ticket-page">
+      <div class="left-panel">
+        <div class="eventbrite-logo">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8FMM8twVC3weNrsMihrgZPRUGdFlE76nj9w&s"
+          />
+        </div>
+
+        <h1>What email<br />did you use to<br />buy tickets?</h1>
+
+        <input
+          type="email"
+          class="form-control mb-3"
+          placeholder="Email address"
+        />
+
+        <button class="continue-btn" onclick="goTicketLogin()">Continue</button>
+
+        <a href="index.html" class="back-link">Back</a>
+      </div>
+
+      <div class="right-panel">
+        <div class="image-caption">
+          Enjoy the Party Bae<br />
+          Grab Your Passes<br />
+          Brooklyn, NY
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function goTicketLogin() {
+        if (localStorage.getItem("isLoggedIn") === "true") {
+          window.location.href = "ticket.html";
+        } else {
+          window.location.href = "login.html?fromTicket=true";
+        }
+      }
+    </script>
+  </body>
+</html>

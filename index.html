@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8FMM8twVC3weNrsMihrgZPRUGdFlE76nj9w&s"
+          height="25px"
+          width="60px"
+        />
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Search events" />
+          <i class="fa-solid fa-location-dot"></i>
+          <input type="text" placeholder="Hyderabad" />
+          <button class="search-btn" onclick="searchEvents()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <a href="#defaultCards" class="nav-link" id="nav-id"
+          ><h6>Find Events</h6></a
+        >
+        <button onclick="checkAuth()" class="nav-link">Create Event</button>
+        <h6 id="nav-id">
+          <select>
+            Help Center
+            <option>Help Center</option>
+            <option>Find your Contact</option>
+            <option>Contact your event Organizer</option>
+          </select>
+        </h6>
+        <a href="find-tickets.html" class="nav-link" id="nav-id"
+          ><h6>Find my Tickets</h6></a
+        >
+        <a href="login.html" class="nav-link" id="nav-id"><h6>Log in</h6></a>
+        <a href="signup.html" class="nav-link" id="nav-id"><h6>Sign up</h6></a>
+      </div>
+    </nav>
+    <div class="main-sec">
+      <div class="main">
+        <img
+          src="https://eventbrite-build.s3.amazonaws.com/fe/dist/discover-lib/11.29.24/browser/static/images/home/seasonal/music_desktop-2.webp"
+          height="400px"
+          width="100%"
+        />
+      </div>
+    </div>
+
+    <div class="categories">
+      <div class="item">
+        <div class="cate"><i class="fa-solid fa-microphone"></i></div>
+        <p class="desc">Music</p>
+      </div>
+
+      <div class="item">
+        <div class="cate"><i class="fa-solid fa-globe"></i></div>
+        <p class="desc">Nightlife</p>
+      </div>
+
+      <div class="item">
+        <div class="cate"><i class="fa-solid fa-masks-theater"></i></div>
+        <p class="desc">Performing & Visual Arts</p>
+      </div>
+
+      <div class="item">
+        <div class="cate"><i class="fa-solid fa-calendar-days"></i></div>
+        <p class="desc">Holidays</p>
+      </div>
+
+      <div class="item">
+        <div class="cate"><i class="fa-solid fa-heart"></i></div>
+        <p class="desc">Dating</p>
+      </div>
+
+      <div class="item">
+        <div class="cate"><i class="fa-solid fa-gamepad"></i></div>
+        <p class="desc">Hobbies</p>
+      </div>
+
+      <div class="item">
+        <div class="cate"><i class="fa-solid fa-briefcase"></i></div>
+        <p class="desc">Business</p>
+      </div>
+
+      <div class="item">
+        <div class="cate"><i class="fa-solid fa-utensils"></i></div>
+        <p class="desc">Food & Drink</p>
+      </div>
+    </div>
+
+    <hr />
+    <div class="place">
+      <h5 class="browse">Browsing events in</h5>
+      <select class="location-select">
+        <option selected disabled hidden>Hyderabad</option>
+        <option>📡 Use my current location</option>
+        <option>🌐 Browse online events</option>
+        <option>🏙️ Hyderabad, Telangana</option>
+      </select>
+    </div>
+    <hr />
+
+    <div class="tabs">
+      <span>All</span>
+      <span>Music</span>
+      <span>Pool Party</span>
+      <span>Sports</span>
+    </div>
+
+    <h3 class="title">Events</h3>
+
+    <a href="find-tickets.html" style="text-decoration: none; color: inherit">
+      <div class="cards" id="defaultCards">
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174241616%2F2822993834701%2F1%2Foriginal.20260107-200357?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1280%2C640&s=a73130131422dd4a711c61c5a22fdf93"
+          />
+          <span class="tag">Just added</span>
+          <h3>[FREE] Cloud & DevOps Career Roadmap For 2026</h3>
+          <p>Fri, Jan 23 · 11:30 PM</p>
+          <p class="loc">Free</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F908169413%2F744179544493%2F1%2Foriginal.20241128-140913?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&s=3559e67a952ea1b6dfa5336d7c9cb078"
+          />
+          <span class="tag red">Going fast</span>
+          <h3>Masterclass on achieving financial freedom</h3>
+          <p>Sat, Jan 24 · 2:00 PM</p>
+          <p class="loc">Starbucks</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1009171683%2F2719090527421%2F1%2Foriginal.20250415-100215?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2750%2C1375&s=4da1a987ea26a6e18c3ff96a262a2042"
+          />
+          <h3>Join Biggest Community | Investors Founders</h3>
+          <p>Wed, Jan 21 · 12:30 PM</p>
+          <p class="loc">Hyderabad</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173365518%2F2564774212151%2F1%2Foriginal.20251221-212916?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.56&fp-y=0.682&s=a53c79e8e01776502819581671df8e35"
+          />
+          <h3>Tarot Gallery + Full Reading Demo</h3>
+          <p>Wed, Jan 21 · 1:30 AM</p>
+          <p class="loc">Free</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1172591418%2F1917475292883%2F1%2Foriginal.20251209-094025?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&s=4329c7dc3c4ee7f5a15ab266f6ca53ac"
+          />
+          <h3>DATACENTRE INNOVATION SERIES-INDIA</h3>
+          <p>Wed, Feb 4 . 9:00 AM</p>
+          <p>THE PARK HYDERABAD</p>
+          <p class="loc">Free</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174388691%2F2985428722937%2F1%2Foriginal.20260109-060909?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=1781d2a04f4f90af317469e1ce6fe732"
+          />
+          <span class="tag red">Almost Full</span>
+          <h3>
+            Start the Year with a new direction: Workshop for Working
+            Professionals
+          </h3>
+          <p>Sat, Feb 21 · 6:00 PM</p>
+          <p class="loc">Starbucks</p>
+          <p class="loc">Free</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174599075%2F1728465360463%2F1%2Foriginal.20260112-083540?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=dd3c93711acfb3895096407b614c3cea"
+          />
+          <h3>PGP YL Insights:Programme Infosession Hyderabad</h3>
+          <p>Sunday, 3:30 PM</p>
+          <p>ISB Campus Khemka Auditorium</p>
+          <p class="loc">Free</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1170189537%2F2840959741841%2F1%2Foriginal.20251105-095417?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.039&fp-y=0.244&s=fe2209c8520230f7a8b611aa6b25e7fb"
+          />
+          <span class="tag red">Almost Full</span>
+          <h3>Test Automation Summit | Hyderabad | 2026</h3>
+          <p>Thu, Feb 26 · 9:00 AM</p>
+          <p>TBD</p>
+          <p class="loc">Free</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174288093%2F2987091105726%2F1%2Foriginal.20260108-075842?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=26b1246867900a571995513de5d48a5e"
+          />
+          <span class="tag red">Almost Full</span>
+          <h3>Master Workplace Communication & Stress Management</h3>
+          <p>Sat, Feb 21 · 6:00 PM</p>
+          <p>Avasa</p>
+          <p class="loc">Free</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1011581013%2F529664982707%2F1%2Foriginal.20250417-194537?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.000795454545455&fp-y=0.00541044776119&s=0627acf1fbf04ba60e5df4d5a061f194"
+          />
+          <span class="tag red">Going fast</span>
+          <h3>Women in Tech Hyderabad- OutGeek Women</h3>
+          <p>Wed, Nov 11 · 6:00 PM</p>
+          <p>Hyderabad</p>
+          <p class="loc">Free $0.0</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F985667183%2F5509431938%2F1%2Foriginal.20250317-161723?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=5e-07&fp-y=5e-07&s=604b5641957ab36ced0116f089e0bdb2"
+          />
+          <h3>
+            Hyderabad's Biggest Business and Tech Professional Networking Soiree
+          </h3>
+          <p>Wed, Mar 18 · 6:00 PM</p>
+          <p>Taj Krishna, Hyderabad</p>
+          <p class="loc">Free $0.0</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1172828443%2F222074610258%2F1%2Foriginal.20251212-114205?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=ba5a17dfab9387f4c87392084edefd40"
+          />
+          <h3>Meet the Royal College of Art in Hyderabad</h3>
+          <p>Sat, Feb 7 · 5:00 PM</p>
+          <p>Taj Deccan, Hyderabad</p>
+          <p class="loc">Free</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173134442%2F2986560480167%2F1%2Foriginal.20251217-153132?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.504&fp-y=0.433&s=5a1c6d04566ebe308f5e9169ea8fb3cc"
+          />
+          <h3>Cloud Data Engineer GCP Cloud Data</h3>
+          <p>Mon, Jan 26 · 11:00 AM</p>
+          <p>Quality Thought</p>
+          <p class="loc">Free</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1157277273%2F325878741129%2F1%2Foriginal.20251020-011528?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C7%2C1118%2C559&s=82fc1c0bea3e21982edab573b986e8e2"
+          />
+          <span class="tag red">Going fast</span>
+          <h3>
+            NUS-ISS Graduate Programmes:Preview,Entrance Test Interview:
+            Hyderabad
+          </h3>
+          <p>Tue, Mar 10 · 9:00 AM</p>
+          <p>Red Fox, Hotel Hyderabad</p>
+          <p class="loc">Free</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173891878%2F2987091105726%2F1%2Foriginal.20260103-122649?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=05ea5ed270833ff47c7d9a5e073b323c"
+          />
+          <span class="tag red">Almost Full</span>
+          <h3>The Mind Upgrade Pressure:Won't Wait Neither Should Clarity</h3>
+          <p>Sat, Feb 21 · 6:00 PM</p>
+          <p>Avasa</p>
+          <p class="loc">Free</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1172677403%2F2858993540921%2F1%2Foriginal.20251210-120235?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&s=dc32567709cd2a86a8d7e8cf2664337e"
+          />
+          <h3>
+            Azure DataEngineering Training in Hyderabad | Version IT Institute
+          </h3>
+          <p>Fri, Jan 23 · 8:30 AM</p>
+          <p>
+            Version IT- Sap Abap, Basis, Fico, SD, MM, HR, SAC Online Training
+            Hyderabad
+          </p>
+          <p class="loc">Free</p>
+        </div>
+      </div>
+
+      <div class="cards" id="dynamicResults"></div>
+    </a>
+
+    <div class="container my-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="fw-bold">Top destinations in United States</h4>
+        <div>
+          <button
+            class="btn btn-light rounded-circle"
+            data-bs-target="#destinationCarousel"
+            data-bs-slide="prev"
+          >
+            ‹
+          </button>
+          <button
+            class="btn btn-light rounded-circle"
+            data-bs-target="#destinationCarousel"
+            data-bs-slide="next"
+          >
+            ›
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="destinationCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row g-3">
+              <div class="col-md-3">
+                <div class="dest-card">
+                  <img
+                    src="https://d1n9ior3u0lhlo.cloudfront.net/ny--new-york.webp"
+                    class="w-100"
+                  />
+                  <span>New York</span>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="dest-card">
+                  <img
+                    src="https://d1n9ior3u0lhlo.cloudfront.net/ca--los-angeles.webp"
+                    class="w-100"
+                  />
+                  <span>Los Angeles</span>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="dest-card">
+                  <img
+                    src="https://d1n9ior3u0lhlo.cloudfront.net/il--chicago.webp"
+                    class="w-100"
+                  />
+                  <span>Chicago</span>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="dest-card">
+                  <img
+                    src="https://d1n9ior3u0lhlo.cloudfront.net/dc--washington.webp"
+                    class="w-100"
+                  />
+                  <span>Washington</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row g-3">
+              <div class="col-md-3">
+                <div class="dest-card">
+                  <img
+                    src="https://d1n9ior3u0lhlo.cloudfront.net/ga--atlanta.webp"
+                    class="w-100"
+                  />
+                  <span>Atlanta</span>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="dest-card">
+                  <img
+                    src="https://d1n9ior3u0lhlo.cloudfront.net/tx--dallas.webp"
+                    class="w-100"
+                  />
+                  <span>Dallas</span>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="dest-card">
+                  <img
+                    src="https://d1n9ior3u0lhlo.cloudfront.net/tx--houston.webp"
+                    class="w-100"
+                  />
+                  <span>Houston</span>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="dest-card">
+                  <img
+                    src="https://d1n9ior3u0lhlo.cloudfront.net/ca--san-francisco.webp"
+                    class="w-100"
+                  />
+                  <span>San Fransico</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="fw-bold mb-4" style="padding-top: 30px">Popular cities</h4>
+
+      <div class="d-flex flex-wrap gap-3">
+        <a href="#" class="city-pill">Things to do in Austin <span>↗</span></a>
+        <a href="#" class="city-pill">Things to do in Abilene <span>↗</span></a>
+        <a href="#" class="city-pill">Things to do in Denver <span>↗</span></a>
+        <a href="#" class="city-pill">Things to do in Seattle <span>↗</span></a>
+        <a href="#" class="city-pill">Things to do in Phoenix <span>↗</span></a>
+        <a href="#" class="city-pill"
+          >Things to do in Albuquerque <span>↗</span></a
+        >
+
+        <a href="#" class="city-pill">Things to do in Detroit <span>↗</span></a>
+        <a href="#" class="city-pill">Things to do in Anaheim <span>↗</span></a>
+        <a href="#" class="city-pill">Things to do in Raleigh <span>↗</span></a>
+        <a href="#" class="city-pill"
+          >Things to do in Baltimore <span>↗</span></a
+        >
+        <a href="#" class="city-pill"
+          >Things to do in Nashville <span>↗</span></a
+        >
+        <a href="#" class="city-pill">Things to do in Wichita <span>↗</span></a>
+
+        <a href="#" class="city-pill"
+          >Things to do in Indianapolis <span>↗</span></a
+        >
+        <a href="#" class="city-pill"
+          >Things to do in San Antonio <span>↗</span></a
+        >
+      </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="container py-5">
+        <div class="row">
+          <!-- Column 1 -->
+          <div class="col-md-3 mb-4">
+            <h6 class="footer-title">Use Eventbrite</h6>
+            <ul class="footer-links">
+              <li><a href="#">Create Events</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Event Marketing Platform</a></li>
+              <li><a href="#">Eventbrite Mobile Ticket App</a></li>
+              <li><a href="#">Eventbrite Check-In App</a></li>
+              <li><a href="#">Eventbrite App Marketplace</a></li>
+              <li><a href="#">Event Registration Software</a></li>
+              <li><a href="#">Community Guidelines</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="col-md-3 mb-4">
+            <h6 class="footer-title">Plan Events</h6>
+            <ul class="footer-links">
+              <li><a href="#">Sell Tickets Online</a></li>
+              <li><a href="#">Performing Arts Ticketing Software</a></li>
+              <li><a href="#">Sell Concert Tickets Online</a></li>
+              <li><a href="#">Event Payment System</a></li>
+              <li><a href="#">Solutions for Professional Services</a></li>
+              <li><a href="#">Event Management Software</a></li>
+              <li><a href="#">Halloween Party Planning</a></li>
+              <li><a href="#">Virtual Events Platform</a></li>
+              <li><a href="#">QR Codes for Event Check-In</a></li>
+              <li><a href="#">Post your event online</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <h6 class="footer-title">Find Events</h6>
+            <ul class="footer-links">
+              <li><a href="#">New Orleans Food & Drink Events</a></li>
+              <li><a href="#">San Francisco Holiday Events</a></li>
+              <li><a href="#">Tulum Music Events</a></li>
+              <li><a href="#">Denver Hobby Events</a></li>
+              <li><a href="#">Atlanta Pop Music Events</a></li>
+              <li><a href="#">New York Events</a></li>
+              <li><a href="#">Chicago Events</a></li>
+              <li><a href="#">Events in Dallas Today</a></li>
+              <li><a href="#">Los Angeles Events</a></li>
+              <li><a href="#">Washington Events</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4 -->
+          <div class="col-md-3 mb-4">
+            <h6 class="footer-title">Connect With Us</h6>
+            <ul class="footer-links">
+              <li><a href="#">Contact Support</a></li>
+              <li><a href="#">Contact Sales</a></li>
+              <li><a href="#">X</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">TikTok</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom pt-4 mt-4">
+          <div
+            class="d-flex flex-wrap justify-content-between align-items-center gap-3"
+          >
+            <div class="footer-bottom-links">
+              <a href="#">How it Works</a>
+              <a href="#">Pricing</a>
+              <a href="#">Contact Support</a>
+              <a href="#">About</a>
+              <a href="#">Blog</a>
+              <a href="#">Help</a>
+              <a href="#">Careers</a>
+              <a href="#">Press</a>
+              <a href="#">Impact</a>
+              <a href="#">Investors</a>
+              <a href="#">Security</a>
+              <a href="#">Developers</a>
+              <a href="#">Status</a>
+              <a href="#">Terms</a>
+              <a href="#">Privacy</a>
+              <a href="#">Accessibility</a>
+              <a href="#">Cookies</a>
+              <a href="#">Manage Cookie Preferences</a>
+              <a href="#">Do Not Sell or Share My Personal Information</a>
+            </div>
+
+            <div class="footer-copy" style="display: flex; padding-left: 20px">
+              © 2026 Eventbrite
+
+              <div class="footer-country" style="padding-left: 800px">
+                <select class="form-select footer-country-select">
+                  <option value="US" selected>United States</option>
+                  <option value="IN">India</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="CA">Canada</option>
+                  <option value="AU">Australia</option>
+                  <option value="DE">Germany</option>
+                  <option value="FR">France</option>
+                  <option value="ES">Spain</option>
+                  <option value="IT">Italy</option>
+                  <option value="BR">Brazil</option>
+                  <option value="MX">Mexico</option>
+                  <option value="JP">Japan</option>
+                  <option value="CN">China</option>
+                  <option value="SG">Singapore</option>
+                  <option value="AE">United Arab Emirates</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
