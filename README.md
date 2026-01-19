@@ -1,7 +1,9 @@
 🎉 Event Management System
+
 A web-based Event Management System that allows users to discover events, create events, and manage ticket bookings with secure authentication and smooth navigation.
 
 📌 Project Overview
+
 The Event Management System is designed to provide a simple and user-friendly platform for both event organizers and participants. Users can browse events, create their own events, and book tickets with dynamic seat and price selection. The system ensures proper authentication and redirects users to the correct pages based on their actions.
 
 ✨ Features
@@ -40,7 +42,6 @@ LocalStorage
 QR Code Generator API
 Font Awesome Icons
 
-📁 Folder Structure
 /event-management-system
 │
 ├── index.html        # Home Page
@@ -52,4 +53,4 @@ Font Awesome Icons
 │
 ├── style.css         # Main Styles
 ├── app.js            # Main JavaScript Logic
-└── create.js         # Create events Logic
+└── create.js        # Create event logic
